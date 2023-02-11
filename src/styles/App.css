@@ -1,0 +1,45 @@
+p {
+    max-width: 20em; 
+}
+
+.wrapper {
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+    grid-template-columns: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor:pointer;
+}
+
+.card_name {
+    padding: 0.5rem 0;
+    text-align: left;
+}
+
+.card_content {
+    height: 6rem;
+    width: 100%;
+    text-align: left;
+}
+
+.card_description {
+    padding: 1rem 0 0 0;
+}
+
+.btn {
+    font-family: inherit;
+}
