@@ -3,9 +3,9 @@ import axios from "axios";
 
 function Form(props) {
   const [apartment, setApartment] = useState({
-    rooms: 0,
+    rooms: 1,
     name: "",
-    price: 0,
+    price: 1,
     description: "",
   });
 
@@ -43,39 +43,50 @@ function Form(props) {
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <p>Name</p>
-      <input
-        type="text"
-        name="name"
-        value={apartment.name}
-        onChange={handleChange}
-        required
-      />
-      <p>Rooms</p>
-      <input
-        type="text"
-        name="rooms"
-        value={apartment.rooms}
-        onChange={handleChange}
-        required
-      />
-      <p>Price</p>
-      <input
-        type="text"
-        name="price"
-        value={apartment.price}
-        onChange={handleChange}
-        required
-      />
-      <p>Description</p>
-      <textarea
-        name="description"
-        rows="6"
-        columns="15"
-        value={apartment.description}
-        onChange={handleChange}
-      />
-      <input type="submit" />
+      <div>
+        <p>Name</p>
+        <input
+          className="name"
+          type="text"
+          name="name"
+          value={apartment.name}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div className="form_child_2">
+        <p>Rooms</p>
+        <input
+          type="text"
+          name="rooms"
+          value={apartment.rooms}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div className="form_child_2">
+        <p style={{marginLeft: "7px"}}>Price</p>
+        <input
+          className="price"
+          type="text"
+          name="price"
+          value={apartment.price}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div>
+        <p>Description</p>
+        <textarea
+          name="description"
+          rows="8"
+          value={apartment.description}
+          onChange={handleChange}
+        />
+      </div>
+      <div>
+        <button type="submit" className="submit_button">Add</button>
+      </div>
     </form>
   );
 }

@@ -26,6 +26,7 @@ function Apartment(props) {
           <p>{props.descr}</p>
         </div>
       </div>
+      <br/>
       <Button handleClick={handleClick} className="btn" text="Delete" />
     </div>
   );

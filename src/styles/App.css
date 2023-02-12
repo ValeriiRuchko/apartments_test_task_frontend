@@ -1,8 +1,10 @@
 p {
-    max-width: 20em; 
+    max-width: 300px;
+    word-wrap: break-word;
 }
 
 .wrapper {
+    margin-top: 1rem;
     display: grid;
     gap: 2rem;
     justify-content: center;
@@ -18,7 +20,8 @@ p {
 }
 
 .card {
-    overflow: hidden;
+    overflow: auto;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -31,7 +34,7 @@ p {
 }
 
 .card_content {
-    height: 6rem;
+    height: auto;
     width: 100%;
     text-align: left;
 }
@@ -42,4 +45,34 @@ p {
 
 .btn {
     font-family: inherit;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 300px;
+}
+
+.name {
+    width: 300px;
+}
+
+textarea {
+    width: 300px;
+    resize: none;
+}
+
+.form_child_2 {
+    flex-basis: 150px;
+    flex-grow: 1;
+}
+
+.price {
+    margin-left: 7px;
+}
+
+.submit_button {
+    padding: 8px 10px;
+    margin-top: 5px;
 }

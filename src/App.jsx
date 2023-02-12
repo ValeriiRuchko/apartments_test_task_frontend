@@ -35,7 +35,7 @@ function App() {
       <Form updatePage={newGetReq}/>
       <Input setRooms={setRooms} />
       <Dropdown price={price} setPrice={setPrice} />
-      <h2>Results found: {length}</h2>
+      <h3>Results found: {length}</h3>
       {data.map((value) => {
         return (
           <Apartment
